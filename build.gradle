@@ -15,12 +15,14 @@ compileTestJava.options.encoding = "UTF-8"
 repositories {
     jcenter()
     mavenCentral()
+    maven { url "http://dl.bintray.com/epam/reportportal" }
 }
 
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.5.2'
     testImplementation 'com.codeborne:selenide:5.6.1'
     implementation 'com.github.javafaker:javafaker:1.0.2'
+    testCompile 'com.epam.reportportal:agent-java-junit5:$LATEST_VERSION'
 }
 
 test {
